@@ -8,7 +8,7 @@ public class Day04 {
 		System.out.println("Web Login Home Loan");
 	}
 	
-	@Test
+	@Test(groups= {"Smoke"})
 	public void MobileloginHomeLoan() {
 		System.out.println("Mobile Login Home Loan");
 	}
