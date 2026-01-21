@@ -14,7 +14,17 @@ public class Day03 {
 	}
 	
 	@Test
-	public void LoginAPICarLoan() {
+	public void MobileleSignInCarLoan() {
+		System.out.println("Mobile SignIn Car Loan");
+	}
+	
+	@Test
+	public void MobilelSignOutCarLoan() {
+		System.out.println("Mobile SignOut Car Loan");
+	}
+	
+	@Test
+	public void APICarLoan() {
 		System.out.println("API Login Car Loan");
 	}
 }
