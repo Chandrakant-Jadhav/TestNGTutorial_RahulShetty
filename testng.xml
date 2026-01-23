@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM " https://testng.org/testng-1.0.dtd">
 <suite name="Loan Department Suite">
+<listeners>
+
+<listener class-name="test.Listeners" />
+
+</listeners>
 	<parameter name="URL" value="Tesers-HUB.com" /> <!--suite level parameter-->
 
 
@@ -10,7 +15,8 @@
 		<classes>
 			<class name="test.Day01">
 				<methods>
-					<include name="Demo"></include>
+					<include name="Demo" />
+					<include name="SecondTest" />
 				</methods>
 			</class>
 			<class name="test.Day02" />
