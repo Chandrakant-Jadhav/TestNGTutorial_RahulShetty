@@ -1,11 +1,14 @@
 package test;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Day04 {
+	@Parameters({"URL"})
 	@Test
-	public void WebloginHomeLoan() {
-		System.out.println("Web Login Home Loan");
+	public void WebloginHomeLoan(String urlname) {
+		System.out.println("Web Login Home personal Loan");
+		System.out.println(urlname);
 	}
 	
 	@Test(groups= {"Smoke"})

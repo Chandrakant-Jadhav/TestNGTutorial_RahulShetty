@@ -5,6 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Day03 {
@@ -21,14 +22,17 @@ public class Day03 {
 	}
 	
 	
-	@Test
+	@Test(enabled=false)
 	public void WebloginCarLoan() {
-		System.out.println("Web Login Car Loan");
+		System.out.println("Web Login Car Loan - Disabled Test Case");
 	}
 	
+	@Parameters({"URL", "APIKey/username"})
 	@Test
-	public void MobileloginCarLoan() {
+	public void MobileloginCarLoan(String urlname, String key) {
 		System.out.println("Mobile Login Car Loan");
+		System.out.println(urlname);
+		System.out.println(key);
 	}
 	
 	
@@ -54,12 +58,12 @@ public class Day03 {
 		System.out.println("I am no 1");
 	}
 	
-	@Test
+	@Test(timeOut=4000)
 	public void MobilelSignOutCarLoan() {
 		System.out.println("Mobile SignOut Car Loan");
 	}
 	
-	@Test
+	@Test(dependsOnMethods= {"MobileloginCarLoan"})
 	public void APICarLoan() {
 		System.out.println("API Login Car Loan");
 	}
