@@ -20,12 +20,13 @@ public class Listeners implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		//screenshot code can be written here
+		System.out.println("Test failed: " + result.getName());
 		System.out.println("I failed this listeners test case");
 	}
 	
 	@Override
 	public void onTestSkipped(ITestResult result) {
-	
+		System.out.println("Test skipped: " + result.getName());
 	}
 
 
