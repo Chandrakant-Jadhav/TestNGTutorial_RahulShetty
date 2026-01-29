@@ -15,6 +15,10 @@ public class Ps1 extends Ps {
 		
 		System.out.println(ps2.increment());
 		System.out.println(ps2.decrement());
+		
+		//Ps3 ps3=new Ps3(3); 
+		System.out.println(ps2.multipleByThree());
+		
 	}
 
 }
